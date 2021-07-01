@@ -95,7 +95,7 @@ namespace KFQS_Form
                 string sStartDate       = string.Format("{0:yyyy-MM-dd}", dtStartDate.Value);
                 string sEndDate         = string.Format("{0:yyyy-MM-dd}", dtEnddate.Value);
                 
-                rtnDtTemp = helper.FillTable("03ER_ERRORREC_S33_1", CommandType.StoredProcedure
+                rtnDtTemp = helper.FillTable("19ER_ERRORREC_S1", CommandType.StoredProcedure
                                     , helper.CreateParameter("PLANTCODE",        sPlantCode      , DbType.String, ParameterDirection.Input)
                                     , helper.CreateParameter("WORKCENTERCODE",   sWorkCenterCode , DbType.String, ParameterDirection.Input)
                                     , helper.CreateParameter("STARTDATE",        sStartDate      , DbType.String, ParameterDirection.Input)
@@ -128,7 +128,7 @@ namespace KFQS_Form
                 string sPlantCode = Convert.ToString(grid1.ActiveRow.Cells["PLANTCODE"].Value);
                 string sWorkcenter = Convert.ToString(grid1.ActiveRow.Cells["WORKCENTERCODE"].Value);
 
-                rtnDtTemp = helper.FillTable("[03ER_ERRORREC_S33_2]", CommandType.StoredProcedure
+                rtnDtTemp = helper.FillTable("[19ER_ERRORREC_S2]", CommandType.StoredProcedure
                                     , helper.CreateParameter("PLANTCODE", sPlantCode, DbType.String, ParameterDirection.Input)
                                     , helper.CreateParameter("WORKCENTERCODE", sWorkcenter, DbType.String, ParameterDirection.Input)
                                     );
