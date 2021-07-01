@@ -255,7 +255,7 @@ namespace KFQS_Form
             {
                 string sStatus = "Wait";
                 if (btnReTest.Text == "재검사 시작") sStatus = "Ing";
-                helper.ExecuteNoneQuery("TEAM02_PP_ActureOutPut_U1", CommandType.StoredProcedure
+                helper.ExecuteNoneQuery("PP_ActureOutput_U1", CommandType.StoredProcedure
                                                                     , helper.CreateParameter("PLANTCODE", "1000", DbType.String, ParameterDirection.Input)
                                                                     , helper.CreateParameter("INLOTNO", Convert.ToString(this.grid1.ActiveRow.Cells["INLOTNO"].Value), DbType.String, ParameterDirection.Input)
                                                                     , helper.CreateParameter("STATUS", sStatus, DbType.String, ParameterDirection.Input)
