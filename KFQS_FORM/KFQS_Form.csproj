@@ -64,6 +64,12 @@
     <Compile Include="BM_Inspection[수입 검사 항목 마스터].designer.cs">
       <DependentUpon>BM_Inspection[수입 검사 항목 마스터].cs</DependentUpon>
     </Compile>
+    <Compile Include="BM_WorkcenterPerItem[작업장 별 품목 마스터].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BM_WorkcenterPerItem[작업장 별 품목 마스터].designer.cs">
+      <DependentUpon>BM_WorkcenterPerItem[작업장 별 품목 마스터].cs</DependentUpon>
+    </Compile>
     <Compile Include="ER_RepairRec[고장 수리 이력 조회화면].cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="MM_StockCheckRec[검사이력조회].designer.cs">
       <DependentUpon>MM_StockCheckRec[검사이력조회].cs</DependentUpon>
+    </Compile>
+    <Compile Include="MM_StockMMRec[원자재 입출 이력].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MM_StockMMRec[원자재 입출 이력].designer.cs">
+      <DependentUpon>MM_StockMMRec[원자재 입출 이력].cs</DependentUpon>
     </Compile>
     <Compile Include="PP_BadCheckList%28조건별 불량 조회%29.cs">
       <SubType>Form</SubType>
@@ -111,6 +123,18 @@
     </Compile>
     <Compile Include="PP_InspecRec[수입검사 이력 조회].designer.cs">
       <DependentUpon>PP_InspecRec[수입검사 이력 조회].cs</DependentUpon>
+    </Compile>
+    <Compile Include="PP_STockHALBrec[재공 재고 입출고 이력].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PP_STockHALBrec[재공 재고 입출고 이력].Designer.cs">
+      <DependentUpon>PP_STockHALBrec[재공 재고 입출고 이력].cs</DependentUpon>
+    </Compile>
+    <Compile Include="PP_StockPPRec[공정 재고 입출 이력].cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PP_StockPPRec[공정 재고 입출 이력].designer.cs">
+      <DependentUpon>PP_StockPPRec[공정 재고 입출 이력].cs</DependentUpon>
     </Compile>
     <Compile Include="WM_InspectionPerItem[품목별 검사항목 마스터].cs">
       <SubType>Form</SubType>
@@ -280,11 +304,17 @@
     <EmbeddedResource Include="BM_Inspection[수입 검사 항목 마스터].resx">
       <DependentUpon>BM_Inspection[수입 검사 항목 마스터].cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BM_WorkcenterPerItem[작업장 별 품목 마스터].resx">
+      <DependentUpon>BM_WorkcenterPerItem[작업장 별 품목 마스터].cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ER_RepairUpdate[고장,수리 등록화면].resx">
       <DependentUpon>ER_RepairUpdate[고장,수리 등록화면].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MM_StockCheckRec[검사이력조회].resx">
       <DependentUpon>MM_StockCheckRec[검사이력조회].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MM_StockMMRec[원자재 입출 이력].resx">
+      <DependentUpon>MM_StockMMRec[원자재 입출 이력].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PP_BadCheckList%28조건별 불량 조회%29.resx">
       <DependentUpon>PP_BadCheckList%28조건별 불량 조회%29.cs</DependentUpon>
@@ -300,6 +330,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PP_InspecRec[수입검사 이력 조회].resx">
       <DependentUpon>PP_InspecRec[수입검사 이력 조회].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PP_STockHALBrec[재공 재고 입출고 이력].resx">
+      <DependentUpon>PP_STockHALBrec[재공 재고 입출고 이력].cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PP_StockPPRec[공정 재고 입출 이력].resx">
+      <DependentUpon>PP_StockPPRec[공정 재고 입출 이력].cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WM_InspectionPerItem[품목별 검사항목 마스터].resx">
       <DependentUpon>WM_InspectionPerItem[품목별 검사항목 마스터].cs</DependentUpon>
