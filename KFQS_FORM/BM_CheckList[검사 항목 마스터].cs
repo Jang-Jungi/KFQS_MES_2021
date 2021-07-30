@@ -67,9 +67,9 @@ namespace KFQS_Form
                 string sCheckCode = txtCheckCode_H.Text.ToString();
 
                 DataTable dtTemp = new DataTable();
-                dtTemp = helper.FillTable("1JO_BM_CheckList_S1", CommandType.StoredProcedure
+                dtTemp = helper.FillTable("19BM_CheckList_S1", CommandType.StoredProcedure
                                             , helper.CreateParameter("PLANTCODE", sPlantcode, DbType.String, ParameterDirection.Input)
-                                          , helper.CreateParameter("CHECKCODE", sCheckCode, DbType.String, ParameterDirection.Input));
+                                            , helper.CreateParameter("CHECKCODE", sCheckCode, DbType.String, ParameterDirection.Input));
                 this.ClosePrgForm();
                 if (dtTemp.Rows.Count > 0)
                 {
@@ -129,7 +129,7 @@ namespace KFQS_Form
                     {
                         case DataRowState.Deleted:
                             drrow.RejectChanges();
-                            helper.ExecuteNoneQuery("1JO_BM_CheckList_D1", CommandType.StoredProcedure, helper.CreateParameter("PLANTCODE", Convert.ToString(drrow["PLANTCODE"]), DbType.String, ParameterDirection.Input),
+                            helper.ExecuteNoneQuery("19BM_CheckList_D1", CommandType.StoredProcedure, helper.CreateParameter("PLANTCODE", Convert.ToString(drrow["PLANTCODE"]), DbType.String, ParameterDirection.Input),
                                 helper.CreateParameter("CHECKCODE", Convert.ToString(drrow["CHECKCODE"]), DbType.String, ParameterDirection.Input));
 
                             break;
@@ -140,7 +140,7 @@ namespace KFQS_Form
                             //    this.ShowDialog("작업자 ID를 입력하세요.", DC00_WinForm.DialogForm.DialogType.OK);
                             //    return;
                             //}
-                            helper.ExecuteNoneQuery("1JO_BM_CheckList_I1"
+                            helper.ExecuteNoneQuery("19BM_CheckList_I1"
                                                     , CommandType.StoredProcedure
                                                     , helper.CreateParameter("PLANTCODE", Convert.ToString(drrow["PLANTCODE"]), DbType.String, ParameterDirection.Input)
                                                     , helper.CreateParameter("CHECKCODE", Convert.ToString(drrow["CHECKCODE"]), DbType.String, ParameterDirection.Input)
@@ -152,7 +152,7 @@ namespace KFQS_Form
                                                     );
                             break;
                         case DataRowState.Modified:
-                            helper.ExecuteNoneQuery("1JO_BM_CheckList_U1"
+                            helper.ExecuteNoneQuery("19BM_CheckList_U1"
                                                     , CommandType.StoredProcedure
                                                     , helper.CreateParameter("PLANTCODE", Convert.ToString(drrow["PLANTCODE"]), DbType.String, ParameterDirection.Input)
                                                     , helper.CreateParameter("CHECKCODE", Convert.ToString(drrow["CHECKCODE"]), DbType.String, ParameterDirection.Input)

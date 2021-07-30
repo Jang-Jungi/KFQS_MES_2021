@@ -98,7 +98,7 @@ namespace KFQS_Form
                 string sStartDate      = string.Format("{0:yyyy-MM-dd}" ,dtStart_H.Value);
                 string sSendDate       = string.Format("{0:yyyy-MM-dd}", dtEnd_H.Value);
 
-                rtnDtTemp = helper.FillTable("03ER_REPAIRUPDATE_S33", CommandType.StoredProcedure
+                rtnDtTemp = helper.FillTable("19ER_REPAIRUPDATE_S1", CommandType.StoredProcedure
                                     , helper.CreateParameter("PLANTCODE"     , sPlantCode      , DbType.String, ParameterDirection.Input)
                                     , helper.CreateParameter("WORKCENTERCODE", sWorkcenterCode , DbType.String, ParameterDirection.Input)
                                     , helper.CreateParameter("STARTDATE"     , sStartDate      , DbType.String, ParameterDirection.Input)
@@ -171,7 +171,7 @@ namespace KFQS_Form
                         return;
                     }
 
-                    helper.ExecuteNoneQuery("03ER_RepairUpdate_U33"
+                    helper.ExecuteNoneQuery("19ER_RepairUpdate_U1"
                                             , CommandType.StoredProcedure
                                             , helper.CreateParameter("PLANTCODE",      Convert.ToString(dt.Rows[i]["PLANTCODE"])      , DbType.String, ParameterDirection.Input)
                                             , helper.CreateParameter("WORKCENTERCODE", Convert.ToString(dt.Rows[i]["WORKCENTERCODE"]) , DbType.String, ParameterDirection.Input)

@@ -102,7 +102,7 @@ namespace KFQS_Form
                 string sEndtDate  = string.Format("{0:yyyy-MM-dd}", dtEnddate.Value);
 
                 DataTable dtTemp = new DataTable();
-                dtTemp = helper.FillTable("02PP_InspecRec_S1", CommandType.StoredProcedure
+                dtTemp = helper.FillTable("19PP_InspecRec_S1", CommandType.StoredProcedure
                                               , helper.CreateParameter("PLANTCODE",  sPlantCode, DbType.String, ParameterDirection.Input)
                                               , helper.CreateParameter("ITEMCODE",   sItemCode, DbType.String, ParameterDirection.Input)
                                               , helper.CreateParameter("STARTDATE",  sStartDate, DbType.String, ParameterDirection.Input)
@@ -135,7 +135,7 @@ namespace KFQS_Form
                 string sInspNo   = Convert.ToString(grid2.ActiveRow.Cells["INSPNO"].Value);
 
                 DataTable dtTemp = new DataTable();
-                dtTemp = helper.FillTable("02PP_InspecRec_S2", CommandType.StoredProcedure
+                dtTemp = helper.FillTable("19PP_InspecRec_S2", CommandType.StoredProcedure
                                               , helper.CreateParameter("PLANTCODE", sPlantCode, DbType.String, ParameterDirection.Input)
                                               , helper.CreateParameter("INSPNO",    sInspNo, DbType.String, ParameterDirection.Input)
                                               );
