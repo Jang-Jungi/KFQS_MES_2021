@@ -224,6 +224,7 @@
             this.grid1.UpdateMode = Infragistics.Win.UltraWinGrid.UpdateMode.OnCellChange;
             this.grid1.UseFlatMode = Infragistics.Win.DefaultableBoolean.True;
             this.grid1.UseOsThemes = Infragistics.Win.DefaultableBoolean.False;
+            this.grid1.AfterRowActivate += new System.EventHandler(this.grid1_AfterRowActivate);
             // 
             // cboWorkcentercode
             // 
@@ -314,9 +315,9 @@
             // 
             this.ultraGroupBox2.Controls.Add(this.grid2);
             this.ultraGroupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ultraGroupBox2.Location = new System.Drawing.Point(601, 6);
+            this.ultraGroupBox2.Location = new System.Drawing.Point(595, 6);
             this.ultraGroupBox2.Name = "ultraGroupBox2";
-            this.ultraGroupBox2.Size = new System.Drawing.Size(849, 540);
+            this.ultraGroupBox2.Size = new System.Drawing.Size(855, 540);
             this.ultraGroupBox2.TabIndex = 8;
             this.ultraGroupBox2.Text = "작업장 별 품목";
             // 
@@ -398,7 +399,7 @@
             this.grid2.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.grid2.Location = new System.Drawing.Point(3, 30);
             this.grid2.Name = "grid2";
-            this.grid2.Size = new System.Drawing.Size(843, 507);
+            this.grid2.Size = new System.Drawing.Size(849, 507);
             this.grid2.TabIndex = 7;
             this.grid2.TabStop = false;
             this.grid2.Text = "grid2";
@@ -412,7 +413,7 @@
             this.ultraSplitter1.Location = new System.Drawing.Point(574, 6);
             this.ultraSplitter1.Name = "ultraSplitter1";
             this.ultraSplitter1.RestoreExtent = 568;
-            this.ultraSplitter1.Size = new System.Drawing.Size(27, 540);
+            this.ultraSplitter1.Size = new System.Drawing.Size(21, 540);
             this.ultraSplitter1.TabIndex = 9;
             // 
             // BM_WorkcenterPerItem

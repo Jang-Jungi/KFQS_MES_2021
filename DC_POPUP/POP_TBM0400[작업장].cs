@@ -65,6 +65,7 @@ namespace DC_POPUP
 
                     case 3:
                         cboUseFlag_H.Text = argument[3].ToUpper() == "" ? "ALL" : argument[3].ToUpper(); //사용여부
+                        cboUseFlag_H.Tag = argument[3].ToUpper();
                         break;
                 }
                 #endregion
@@ -99,7 +100,7 @@ namespace DC_POPUP
             string RS_CODE    = string.Empty, RS_MSG = string.Empty;
             string sPlantCode = string.Empty;
             string sUseFlag   = string.Empty;
-            string sOpCode    = txtOpCode.Text.Trim();
+            string sOpCode = Convert.ToString(cboUseFlag_H.Tag);
             string sOpName    = txtOpName.Text.Trim();
 
             sPlantCode = Convert.ToString(this.cboPlantCode_H.Value);
